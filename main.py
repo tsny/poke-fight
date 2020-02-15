@@ -1,4 +1,5 @@
 from pokemon import *
+from input import *
 
 enemy = Pokemon()
 player = Pokemon()
@@ -10,7 +11,9 @@ print("A wild " + enemy.name + " appears!")
 if (enemy.isShiny):
     print("Wow! It's shiny!")
 
-print("Go! " + player.name + "!")
+print("Go! " + player.name + "!\n")
+
+getInput()
 
 
 
