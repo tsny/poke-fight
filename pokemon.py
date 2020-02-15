@@ -5,6 +5,7 @@ class Pokemon:
     def __init__(self):
         rand = Random().json()
         self.name = rand["name"].capitalize() 
+        self.isShiny = calculateShiny()
         #self.hp = rand["hp"]
 
 def Random():
@@ -13,3 +14,7 @@ def Random():
     r = requests.get(url)
     return r
 
+def calculateShiny():
+    num = random.randrange(8000)
+    other = random.randrange(8000)
+    return num == other
