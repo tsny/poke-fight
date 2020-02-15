@@ -1,10 +1,14 @@
-import requests
-import random
-import json
 from pokemon import *
 
-randP = Pokemon()
-print("A wild " + randP.name + " appears!")
+enemy = Pokemon()
+player = Pokemon()
+
+print(chr(27) + "[2J")
+
+print("A wild " + enemy.name + " appears!")
+
+print("Go! " + player.name + "!")
+
 
 #pp = pprint.PrettyPrinter(depth=6)
 #pp.pprint(r.json())
