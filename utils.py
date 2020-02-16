@@ -4,6 +4,7 @@ import argparse
 def chance(range):
     num = random.randrange(range)
     other = random.randrange(range)
+    #print(str(num) + " == " + str(other))
     return num == other
 
 def clearScreen():

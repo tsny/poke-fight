@@ -5,10 +5,12 @@ from input import *
 args = parseArgs()
 num = args.num
 
+clearScreen()
+
+print("Loading Pokemon...")
+
 player = Pokemon(num)
 enemy = Pokemon()
-
-clearScreen()
 
 print("A wild " + enemy.name + " appears!")
 
@@ -17,5 +19,6 @@ if (enemy.isShiny):
 
 print("Go! " + player.name + "!\n")
 
-getInput()
+while (getInput() == True):
+    print("")
 

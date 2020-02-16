@@ -4,12 +4,15 @@ from utils import chance
 
 class Pokemon:
     def __init__(self, num=None):
+
         if (num is None):
             num = random.randrange(500)
         json = hitApi(num)
+
         self.name = json["name"].capitalize() 
         self.isShiny = calculateShiny()
         self.power = random.randrange(50)
+        self.hp = 100
 
 def calculateShiny():
     return chance(8000)
