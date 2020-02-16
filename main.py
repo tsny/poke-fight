@@ -2,12 +2,7 @@ from pokemon import *
 from utils import *
 from input import *
 
-import argparse
-
-parser = argparse.ArgumentParser(description='Jump right into a Pokemon fight!')
-parser.add_argument('-n', '--num', type=int, help='Choose a pokemon to fight using their number with this arg')
-
-args = parser.parse_args()
+args = parseArgs()
 num = args.num
 
 player = Pokemon(num)
