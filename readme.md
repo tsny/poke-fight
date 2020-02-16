@@ -1,6 +1,6 @@
 ## Poke Fight
 
-Random pokemon battles are fun
+Fight a random pokemon with another random(or not so random) pokemon
 
 ### Setup
 
