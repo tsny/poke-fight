@@ -1,20 +1,20 @@
 import random
 import requests
+from utils import chance
 
 class Pokemon:
     def __init__(self):
-        rand = Random().json()
+        rand = randPokemon()
         self.name = rand["name"].capitalize() 
         self.isShiny = calculateShiny()
+        self.power = random.randrange(50)
         #self.hp = rand["hp"]
 
-def Random():
+def randPokemon():
     num = str(random.randrange(500))
     url = "https://pokeapi.co/api/v2/pokemon/" + num + "/"
-    r = requests.get(url)
-    return r
+    return requests.get(url).json()
 
 def calculateShiny():
-    num = random.randrange(8000)
-    other = random.randrange(8000)
-    return num == other
+    return chance(8000)
+
