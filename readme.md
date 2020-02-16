@@ -9,6 +9,14 @@ Run:
 python3 main.py
 ```
 
+### Flags
+
+```
+-n, --num
+```
+
+Choose the pokemon you want to fight with using its national dex number
+
 ### TODO
 
 - add health
