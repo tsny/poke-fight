@@ -1,6 +1,9 @@
 def getInput():
     prompt()
     val = input("Enter action: ") 
+    while (not val.isnumeric()):
+        print("Input invalid!")
+        val = input("Enter action: ") 
 
 def prompt():
     print("1. Attack")
